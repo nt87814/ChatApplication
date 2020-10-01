@@ -28,7 +28,7 @@ class MessageSender implements Runnable {
     }
 
     private void sendMessage(String s) throws Exception {
-        byte[] sendingDataBuffer = new byte[1024];
+        byte[] sendingDataBuffer;
         // Converting data to bytes and storing them in the sending buffer
         sendingDataBuffer = s.getBytes();
 

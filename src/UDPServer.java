@@ -4,6 +4,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 /***************************************************************************************
@@ -41,6 +42,7 @@ public class UDPServer extends Thread{
 
             try {
 
+                Arrays.fill(receivingDataBuffer, (byte)0);
                 // Instantiate a UDP packet to store the
                 // client data using the buffer for receiving data
                 DatagramPacket inputPacket = new DatagramPacket(receivingDataBuffer, receivingDataBuffer.length);
